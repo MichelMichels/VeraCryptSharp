@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/VeracryptSharp/bin/Debug/netstandard2.0
+/VeracryptSharp/obj
+/VeracryptSharpDemo/bin/Debug/netcoreapp3.0
+/VeracryptSharpDemo/obj
