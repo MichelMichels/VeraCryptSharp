@@ -16,7 +16,7 @@ namespace VeraCryptSharp.Extensions
 
         public static bool IsOfType<T>(this PropertyInfo property, object source)
         {
-            return IsSameOrSubclass(property.PropertyType, typeof(T)) && property.GetValue(source) != null;
+            return IsSameOrSubclass(typeof(T), property.PropertyType) && property.GetValue(source) != null;
         }
 
         public static IEnumerable<PropertyInfo> OfType<T>(this IEnumerable<PropertyInfo> properties, object source)
@@ -26,7 +26,7 @@ namespace VeraCryptSharp.Extensions
 
         public static KeyValuePair<string, TValue> Unpack<TValue>(this PropertyInfo property, object source)
         {
-            var name = property.GetCustomAttribute<ArgumentName>().Name;
+            var name = property.GetCustomAttribute<ArgumentName>()?.Name ?? property.Name;
             var value = property.GetValue<TValue>(source);
 
             return new KeyValuePair<string, TValue>(name, value);

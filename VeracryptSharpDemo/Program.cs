@@ -13,7 +13,7 @@ namespace VeracryptSharpDemo
             Console.WriteLine("*** VeraCryptSharp Command Line Library ***");
             Console.WriteLine();
 
-            veraCrypt = new VeraCrypt(@"C:\Users\miche\Documents\VeraCrypt.exe");
+            veraCrypt = new VeraCrypt(@"VeraCrypt.exe");
 
             do
             {

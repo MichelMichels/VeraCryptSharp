@@ -6,6 +6,7 @@ using VeraCryptSharp.Extensions;
 using VeraCryptSharp.Enums;
 using VeraCryptSharp.Core;
 using VeraCryptSharp.Attributes;
+using System.Linq;
 
 namespace VeraCryptSharp
 {
@@ -66,6 +67,22 @@ namespace VeraCryptSharp
         [ArgumentName("/pim")]
         public int PersonalIterationsMultiplier { get; set; }
 
+        public override IEnumerable<string> GetEnumArgumentsString(IEnumerable<PropertyInfo> properties)
+        {
+            var hashEnums = GetHashAlgorithmEnumsString(properties.Where(x => x.IsOfType<HashAlgorithm>(this)));
+            var otherEnums = base.GetEnumArgumentsString(properties.Where(x => !x.IsOfType<HashAlgorithm>(this)));
+
+            return hashEnums.Concat(otherEnums);
+        }
+
+        private IEnumerable<string> GetHashAlgorithmEnumsString(IEnumerable<PropertyInfo> properties)
+        {
+            return properties
+                .OfType<HashAlgorithm>(this)
+                .Unpack<HashAlgorithm>(this)
+                .Where(x => x.Value != HashAlgorithm.Auto)
+                .SelectMany(x => new[] { x.Key, x.Value.ToFriendlyString() });
+        }
 
         /*        
         /tryemptypass  	ONLY when default keyfile configured or when a keyfile is specified in the command line.
@@ -83,6 +100,6 @@ namespace VeraCryptSharp
             Note that turning the password cache off will not clear it (use /w to clear the password cache).
         /history or /h	If it is followed by y or no parameter: enables saving history of mounted volumes; if it is followed by n: disables saving history of mounted volumes (e.g., /h n).
         /wipecache or /w	Wipes any passwords cached in the driver memory.
-        */        
+        */
     }     
 }
