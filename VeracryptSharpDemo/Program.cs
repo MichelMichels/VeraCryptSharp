@@ -13,7 +13,7 @@ namespace VeracryptSharpDemo
             Console.WriteLine("*** VeraCryptSharp Command Line Library ***");
             Console.WriteLine();
 
-            veraCrypt = new VeraCrypt(@"***");
+            veraCrypt = new VeraCrypt(@"C:\Users\miche\Documents\VeraCrypt.exe");
 
             do
             {
@@ -82,6 +82,6 @@ namespace VeracryptSharpDemo
             veraCrypt.DismountAll();
 
             Console.WriteLine("All volumes dismounted.");
-        }
+        }              
     }
 }

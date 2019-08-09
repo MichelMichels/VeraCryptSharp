@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VeraCryptSharp
+namespace VeraCryptSharp.Attributes
 {
     public class ArgumentName : Attribute
     {

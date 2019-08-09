@@ -7,3 +7,6 @@
 /VeracryptSharp/obj
 /VeracryptSharpDemo/bin/Debug/netcoreapp3.0
 /VeracryptSharpDemo/obj
+/VeraCryptSharpTests/bin/Debug/netcoreapp3.0
+/VeraCryptSharpTests/obj/Debug/netcoreapp3.0/VeraCryptSharpTests.AssemblyInfo.cs
+/VeraCryptSharpTests/obj

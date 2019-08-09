@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharp", "Veracrypt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharpDemo", "VeracryptSharpDemo\VeraCryptSharpDemo.csproj", "{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeraCryptSharpTests", "VeraCryptSharpTests\VeraCryptSharpTests.csproj", "{21EEBDD4-CF9C-432B-BC94-70A892725029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EEBDD4-CF9C-432B-BC94-70A892725029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EEBDD4-CF9C-432B-BC94-70A892725029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EEBDD4-CF9C-432B-BC94-70A892725029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EEBDD4-CF9C-432B-BC94-70A892725029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
