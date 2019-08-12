@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using VeraCryptSharp.Core;
+using CliSharp.Core;
 using VeraCryptSharp.Enums;
-using VeraCryptSharp.Exceptions;
-using VeraCryptSharp.Extensions;
+using CliSharp.Extensions;
 
 namespace VeraCryptSharp
 {

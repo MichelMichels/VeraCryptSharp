@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using VeraCryptSharp.Attributes;
+using CliSharp.Attributes;
 
 namespace VeraCryptSharp.Enums
 {
     public enum HashAlgorithm
     {
-        [ArgumentName("")]
+        [ParameterName("")]
         Auto,
 
-        [ArgumentName("sha256")]
+        [ParameterName("sha256")]
         SHA256,
 
-        [ArgumentName("sha512")]
+        [ParameterName("sha512")]
         SHA512,
 
-        [ArgumentName("whirlpool")]
+        [ParameterName("whirlpool")]
         Whirlpool,
 
-        [ArgumentName("ripemd160")]
+        [ParameterName("ripemd160")]
         RIPEMD160,
     }   
 }

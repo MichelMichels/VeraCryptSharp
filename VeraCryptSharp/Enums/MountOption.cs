@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using VeraCryptSharp.Attributes;
+using CliSharp.Attributes;
 
 namespace VeraCryptSharp.Enums
 {    
     public enum MountOption 
     {
-        [ArgumentName("ro")]
+        [ParameterName("ro")]
         ReadOnly,
 
-        [ArgumentName("rm")]
+        [ParameterName("rm")]
         Removable,
 
-        [ArgumentName("ts")]
+        [ParameterName("ts")]
         DoNotPreserveTimestamp,
 
-        [ArgumentName("sm")]
+        [ParameterName("sm")]
         SystemEncryption,
 
-        [ArgumentName("bk")]
+        [ParameterName("bk")]
         EmbeddedBackupHeader,
 
-        [ArgumentName("recovery")]
+        [ParameterName("recovery")]
         Recovery,
 
-        [ArgumentName("noattach")]
+        [ParameterName("noattach")]
         NoAttach,
     }
 }

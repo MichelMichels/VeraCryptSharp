@@ -11,4 +11,10 @@
     <ProjectReference Include="..\VeraCryptSharp\VeraCryptSharp.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CliSharp">
+      <HintPath>..\VeraCryptSharp\libs\CliSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

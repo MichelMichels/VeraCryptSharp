@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using VeraCryptSharp.Core;
+using CliSharp.Core;
 using VeraCryptSharp.Enums;
 
 namespace VeraCryptSharp

@@ -1,6 +1,6 @@
 ﻿using System;
 using VeraCryptSharp;
-using VeraCryptSharp.Exceptions;
+using CliSharp.Exceptions;
 
 namespace VeracryptSharpDemo
 {
@@ -14,7 +14,9 @@ namespace VeracryptSharpDemo
             Console.WriteLine("*** VeraCryptSharp Command Line Library ***");
             Console.WriteLine();
 
-            veraCrypt = new VeraCrypt(@"C:\Users\miche\Documents\VeraCrypt.exe");
+            Console.Write("Enter VeraCrypt.exe absolute path: ");
+            var filePath = Console.ReadLine();
+            veraCrypt = new VeraCrypt(filePath);
 
             do
             {
@@ -70,7 +72,7 @@ namespace VeracryptSharpDemo
                 veraCrypt.Mount(filePath, password, driveLetter: driveLetter);
 
                 Console.WriteLine($@"Volume {driveLetter}:\ mounted.");
-            } catch(VeraCryptExitException)
+            } catch(ExitCodeException)
             {
                 Console.WriteLine("Something went wrong, try again");
             }

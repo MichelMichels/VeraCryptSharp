@@ -6,4 +6,10 @@
     <Authors>Michel Michels</Authors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="CliSharp">
+      <HintPath>libs\CliSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
