@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="CliSharp">
-      <HintPath>libs\CliSharp.dll</HintPath>
-    </Reference>
+    <PackageReference Include="CliSharp" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

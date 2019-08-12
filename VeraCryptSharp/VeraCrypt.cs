@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using CliSharp.Core;
-using VeraCryptSharp.Enums;
+﻿using CliSharp.Core;
 using CliSharp.Extensions;
+using System.IO;
+using VeraCryptSharp.Enums;
 
 namespace VeraCryptSharp
 {
