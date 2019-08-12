@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharp", "VeracryptSharp\VeraCryptSharp.csproj", "{86C76915-72F8-4F2C-A718-3C76C450E055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharp", "VeraCryptSharp\VeraCryptSharp.csproj", "{86C76915-72F8-4F2C-A718-3C76C450E055}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharpDemo", "VeracryptSharpDemo\VeraCryptSharpDemo.csproj", "{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VeraCryptSharpDemo", "VeraCryptSharpDemo\VeraCryptSharpDemo.csproj", "{129EA9E5-3DB2-4665-BD3D-2D0D6CAE4A36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeraCryptSharpTests", "VeraCryptSharpTests\VeraCryptSharpTests.csproj", "{21EEBDD4-CF9C-432B-BC94-70A892725029}"
 EndProject

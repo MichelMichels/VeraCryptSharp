@@ -6,8 +6,4 @@
     <Authors>Michel Michels</Authors>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.6.0" />
-  </ItemGroup>
-
 </Project>
