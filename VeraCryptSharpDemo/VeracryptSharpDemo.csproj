@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VeracryptSharp\VeraCryptSharp.csproj" />
+    <ProjectReference Include="..\VeraCryptSharp\VeraCryptSharp.csproj" />
   </ItemGroup>
 
 </Project>
