@@ -1,3 +1,5 @@
+[![Nuget](https://img.shields.io/nuget/v/VeraCryptSharp)](https://www.nuget.org/packages/VeraCryptSharp/)
+
 # VeraCryptSharp
 
 C# .NET Standard library wrapper for the Veracrypt command line
