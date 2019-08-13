@@ -2,8 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Authors>Michel Michels</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MichelMichels/VeraCryptSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MichelMichels/VeraCryptSharp</RepositoryUrl>
+    <PackageTags>veracrypt, .net standard</PackageTags>
+    <Copyright>© 2019 Michel Michels</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

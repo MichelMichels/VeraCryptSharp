@@ -1,5 +1,6 @@
 ﻿using CliSharp.Core;
 using CliSharp.Extensions;
+using System.Collections.Generic;
 using System.IO;
 using VeraCryptSharp.Enums;
 
@@ -17,11 +18,11 @@ namespace VeraCryptSharp
             this.executablePath = executablePath;              
         }
 
-        public void Mount(string filePath, string password, HashAlgorithm hashAlgorithm = HashAlgorithm.Auto, string driveLetter = "", bool isSilent = false)
+        public void Mount(string volumePath, string password, HashAlgorithm hashAlgorithm = HashAlgorithm.Auto, string driveLetter = "", bool isSilent = false)
         {
             Cli
                 .SetProgram(executablePath)
-                .AddSwitch(VeraCryptSwitches.Volume, filePath)
+                .AddSwitch(VeraCryptSwitches.Volume, volumePath)
                 .AddSwitch(VeraCryptSwitches.DriveLetter, driveLetter)
                 .AddSwitch(VeraCryptSwitches.Password, password)
                 .AddSwitch(VeraCryptSwitches.QuitAfterActions)
@@ -45,6 +46,17 @@ namespace VeraCryptSharp
                 .AddSwitch(VeraCryptSwitches.DismountAll)
                 .AddSwitch(VeraCryptSwitches.QuitAfterActions)
                 .Execute();
-        }       
+        }
+        public void Execute(IEnumerable<CommandLineSwitch> switches)
+        {
+            var command = Cli.SetProgram(executablePath);
+
+            foreach(var _switch in switches)
+            {
+                command.AddSwitch(_switch);
+            }
+
+            command.Execute();
+        }
     }
 }
