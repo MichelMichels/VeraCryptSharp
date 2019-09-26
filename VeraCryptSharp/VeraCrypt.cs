@@ -18,7 +18,7 @@ namespace VeraCryptSharp
             this.executablePath = executablePath;              
         }
 
-        public void Mount(string volumePath, string password, HashAlgorithm hashAlgorithm = HashAlgorithm.Auto, string driveLetter = "", bool isSilent = false)
+        public void Mount(string volumePath, string password, HashAlgorithm hashAlgorithm = HashAlgorithm.Auto, string driveLetter = "V", bool isSilent = false)
         {
             Cli
                 .SetProgram(executablePath)
@@ -28,6 +28,17 @@ namespace VeraCryptSharp
                 .AddSwitch(VeraCryptSwitches.QuitAfterActions)
                 .AddConditionalSwitch(VeraCryptSwitches.HashAlgorithm, hashAlgorithm, hashAlgorithm != HashAlgorithm.Auto)
                 .AddConditionalSwitch(VeraCryptSwitches.QuietMode, isSilent)
+                .Execute();
+        }
+        public void MountSecure(string volumePath, HashAlgorithm hashAlgorithm = HashAlgorithm.Auto, string driveLetter = "V", bool useSecureDesktop = false)
+        {
+            Cli
+                .SetProgram(executablePath)
+                .AddSwitch(VeraCryptSwitches.Volume, volumePath)
+                .AddSwitch(VeraCryptSwitches.DriveLetter, driveLetter)
+                .AddSwitch(VeraCryptSwitches.SecureDesktop, useSecureDesktop ? Answer.Yes : Answer.No)
+                .AddSwitch(VeraCryptSwitches.QuitAfterActions)
+                .AddConditionalSwitch(VeraCryptSwitches.HashAlgorithm, hashAlgorithm, hashAlgorithm != HashAlgorithm.Auto)
                 .Execute();
         }
         public void Dismount(string driveLetter, bool isSilent = false)
