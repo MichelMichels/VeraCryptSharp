@@ -2,7 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
+    <InformationalVersion>3.0.0</InformationalVersion>
+    <FileVersion>3.0.0</FileVersion>
     <Authors>Michel Michels</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
